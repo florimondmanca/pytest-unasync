@@ -1,0 +1,20 @@
+-e .
+
+# Example package
+-e ./fixtures/pycomputer
+
+# Build dependencies
+wheel
+
+# Tooling
+autoflake
+black
+flake8
+flake8-bugbear
+flake8-comprehensions
+isort
+mypy
+pytest==5.*
+pytest-asyncio
+pytest-cov
+seed-isort-config

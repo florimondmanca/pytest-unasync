@@ -1,0 +1,20 @@
+#!/bin/sh -e
+
+export PREFIX=""
+if [ -d 'venv' ] ; then
+    export PREFIX="venv/bin/"
+fi
+
+set -x
+
+if [ -z $CI ]; then
+    scripts/check
+fi
+
+# See: https://pytest-cov.readthedocs.io/en/latest/plugins.html
+export COV_CORE_SOURCE="src"
+export COV_CORE_DATAFILE=".coverage.eager"
+
+export PYTEST_UNASYNC_DEBUG="true"
+
+${PREFIX}pytest $@
