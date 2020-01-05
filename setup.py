@@ -20,7 +20,7 @@ def get_long_description() -> str:
 setup(
     name="pytest-unasync",
     version=get_version("pytest_unasync"),
-    description="Pytest support for unasync",
+    description="Pytest plugin for async-to-sync test generation",
     long_description=get_long_description(),
     long_description_content_type="text/markdown",
     url="http://github.com/florimondmanca/pytest-unasync",
@@ -31,7 +31,6 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        # "unasync==0.4.0",
         "unasync @ "
         "git+https://github.com/python-trio/unasync.git@2c2c9b7fdfd3aeb7cb44d4c1ac6f203500e5efae"
         "#egg=unasync",
