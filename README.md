@@ -2,7 +2,7 @@
 
 A pytest plugin that generates sync tests from async tests at runtime using [`unasync`](https://github.com/python-trio/unasync).
 
-_**Note**: this plugin is **highly** experimental._
+_**Note**: this plugin is **highly** experimental. Please, don't use it. This can go unmaintained anytime._
 
 ## Installation
 
